@@ -32,6 +32,8 @@ jobs:
           is_build=$((current_build > previous_build))
 
           if [ "$is_build" -eq 0 ]; then
+            echo "current_build: $current_build"
+            echo "previous_build: $previous_build"
             echo "Error: Flutter project build number must be incremented."
             exit 1
           fi
